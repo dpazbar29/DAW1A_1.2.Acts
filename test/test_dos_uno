@@ -1,0 +1,22 @@
+import pytest
+from src.dos_uno import * #2.1
+
+@pytest.mark.parametrize(
+    "input_x,expected",
+    [
+      ("Daniel","Daniel")
+    ]
+  )
+
+def test_saludo_params(input_x,expected):
+    assert saludo(input_x) == expected
+
+@pytest.mark.parametrize(
+    "input_x,expected",
+    [
+      ("Daniel","Hola, Daniel")
+    ]
+  )
+
+def test_mensaje_salida(input_x,expected):
+     assert mensaje_salida(input_x) == expected
